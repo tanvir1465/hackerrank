@@ -11,18 +11,10 @@ func miniMaxSum(arr: [Int]) -> Void {
     var maxArr = arr
     maxArr.remove(at: minValueIndex!)
     var maxSum: Int {
-        var sum = 0
-        for value in maxArr {
-            sum += value
-        }
-        return sum
+        return maxArr.reduce(0, +)
     }
     var minSum: Int {
-        var sum = 0
-        for value in minArr {
-            sum += value
-        }
-        return sum
+        return minArr.reduce(0, +)
     }
     
     print("\(minSum) \(maxSum)")
